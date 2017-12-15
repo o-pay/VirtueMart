@@ -173,7 +173,7 @@ class plgVmPaymentAllPayWebATM extends vmPSPlugin {
         if ($order) {
             try {
                 $oPayment = new AllInOne();
-                $oPayment->ServiceURL = ($this->_currentMethod->test_mode == 'yes' ? 'https://payment-stage.allpay.com.tw/Cashier/AioCheckOut/V2' : 'https://payment.allpay.com.tw/Cashier/AioCheckOut/V2');
+                $oPayment->ServiceURL = ($this->_currentMethod->test_mode == 'yes' ? 'https://payment-stage.opay.tw/Cashier/AioCheckOut/V2' : 'https://payment.opay.tw/Cashier/AioCheckOut/V2');
                 $oPayment->HashKey = $this->_currentMethod->hash_key;
                 $oPayment->HashIV = $this->_currentMethod->hash_iv;
                 $oPayment->MerchantID = $this->_currentMethod->merchant_id;
@@ -259,7 +259,7 @@ class plgVmPaymentAllPayWebATM extends vmPSPlugin {
         }
 
         $oPayment = new AllInOne();
-        $oPayment->ServiceURL = ($this->_currentMethod->test_mode == 'yes' ? 'https://payment-stage.allpay.com.tw/Cashier/QueryTradeInfo/V2' : 'https://payment.allpay.com.tw/Cashier/QueryTradeInfo/V2');
+        $oPayment->ServiceURL = ($this->_currentMethod->test_mode == 'yes' ? 'https://payment-stage.opay.tw/Cashier/QueryTradeInfo/V2' : 'https://payment.opay.tw/Cashier/QueryTradeInfo/V2');
         $oPayment->HashKey = $this->_currentMethod->hash_key;
         $oPayment->HashIV = $this->_currentMethod->hash_iv;
 
